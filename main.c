@@ -18,14 +18,24 @@ void draw(){
             if(x==1){
                 printf("%d", y);
             }else{
-                printf("%c", GAME[x][y]);
+                printf("%s", GAME[x][y]);
             }
         }
     }
 }
 
+int getKey(void){
+    int ch;
+    ch = getch();
+    if(ch == KEY_LEFT)
+        printw("Left arrow is pressed\n");
+    return 1;
+}
+
+
 int main(void){
     startGame();
     draw();
+    getKey();
     return 1;
 }
